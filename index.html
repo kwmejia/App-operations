@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <link rel="stylesheet" href="/src/styles/inputs.css">
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <h1>Operaciones con Alfabetos y Cadenas</h1>
+    <div class="cont-inputs">
+      <select id="type-operation" class="select-style">
+        <option value="alphabet">Operaciones de Alfabetos</option>
+        <option value="string">Operaciones de Cadena</option>
+        <option value="language">Operaciones de Lenguajes</option>
+      </select>
+  
+      <select id="operation" class="select-style">
+        <option value="union">Unión</option>
+        <option value="intersection">Intersección</option>
+        <option value="membership">Pertenencia</option>
+        <option value="complement">Complemento</option>
+        <option value="symmetricDifference">Diferencia Simetrica</option>
+        <option value="difference">Diferencia Absoluta</option>
+      </select>
+    </div>
+  
+ <div class="cont-inputs">
+  <div class="inputBox">
+    <input type="text" id="inputA" required="required">
+    <span>Introduce el conjunto A</span>
+  </div>
+
+  <div class="inputBox">
+    <input type="text" id="inputB" required="required">
+    <span>Introduce el conjunto B</span>
+  </div>
+ </div>
+
+    <button id="btn-send">Ejecutar Operación</button>
+    <div id="result">
+      <h4>Resultado:</h4>
+      <p id="resultText"></p>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

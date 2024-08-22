@@ -1,0 +1,84 @@
+.inputBox {
+  position: relative;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(221, 205, 221, 0.133);
+  border-radius: 5px;
+  outline: none;
+  color: #222;
+  font-size: 1em;
+  transition: 0.5s;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: #5a5a5a;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: #FFF;
+  transform: translateX(10px) translateY(-22px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: #db3f59;
+  border-left: 1px solid #db3f59;
+  border-right: 1px solid #db3f59;
+  letter-spacing: 0.2em;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 1px solid #db3f59;
+}
+
+/* Estilo base para los selects */
+.select-style {
+  display: block;
+  width: 400px; /* Ajustar según el diseño del formulario */
+  padding: 8px 10px;
+  margin-top: 5px;
+  font-size: 16px;
+  line-height: 25px;
+  color: #5a5a5a;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  appearance: none; /* Elimina estilo predeterminado para algunos navegadores */
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.select-style:hover {
+  border-color: #888;
+}
+
+.select-style:focus {
+  border-color: #5b9dd9;
+  box-shadow: 0 0 5px rgba(91, 157, 217, 0.5);
+  outline: none;
+}
+
+/* Opcional: Para añadir un ícono a la derecha del select */
+.select-style {
+  position: relative;
+  background-image: url("path_to_your_dropdown_icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
